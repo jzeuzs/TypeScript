@@ -12,7 +12,6 @@ Info seq  [hh:mm:ss:mss] request:
           "lib": [
             "es5"
           ],
-          "allowJs": true,
           "skipDefaultLibCheck": true
         }
       },
@@ -27,11 +26,11 @@ Info seq  [hh:mm:ss:mss] response:
       "success": true,
       "body": true
     }
-//// [/tests/cases/fourslash/server/b.js]
-var a = "a";
-var b: boolean = true;
-function foo(): string { }
-var var = "c";
+//// [/tests/cases/fourslash/server/formatTrimRemainingRange.ts]
+    ;
+    /*
+    
+*/
 
 
 Info seq  [hh:mm:ss:mss] request:
@@ -39,11 +38,11 @@ Info seq  [hh:mm:ss:mss] request:
       "seq": 1,
       "type": "request",
       "arguments": {
-        "file": "/tests/cases/fourslash/server/b.js"
+        "file": "/tests/cases/fourslash/server/formatTrimRemainingRange.ts"
       },
       "command": "open"
     }
-Info seq  [hh:mm:ss:mss] getConfigFileNameForFile:: File: /tests/cases/fourslash/server/b.js ProjectRootPath: undefined:: Result: undefined
+Info seq  [hh:mm:ss:mss] getConfigFileNameForFile:: File: /tests/cases/fourslash/server/formatTrimRemainingRange.ts ProjectRootPath: undefined:: Result: undefined
 Info seq  [hh:mm:ss:mss] Creating InferredProject: /dev/null/inferredProject1*, currentDirectory: /tests/cases/fourslash/server
 Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: /tests/cases/fourslash/server/tsconfig.json 2000 undefined WatchType: Config file for the inferred project root
 Info seq  [hh:mm:ss:mss] FileWatcher:: Added:: WatchInfo: /tests/cases/fourslash/server/jsconfig.json 2000 undefined WatchType: Config file for the inferred project root
@@ -61,7 +60,7 @@ Info seq  [hh:mm:ss:mss] 	Files (4)
 	/home/src/tslibs/TS/Lib/lib.es5.d.ts Text-1 lib.es5.d.ts-Text
 	/home/src/tslibs/TS/Lib/lib.decorators.d.ts Text-1 lib.decorators.d.ts-Text
 	/home/src/tslibs/TS/Lib/lib.decorators.legacy.d.ts Text-1 lib.decorators.legacy.d.ts-Text
-	/tests/cases/fourslash/server/b.js SVC-1-0 "var a = \"a\";\nvar b: boolean = true;\nfunction foo(): string { }\nvar var = \"c\";"
+	/tests/cases/fourslash/server/formatTrimRemainingRange.ts SVC-1-0 "    ;\n    /*\n    \n*/"
 
 
 	../../../../home/src/tslibs/TS/Lib/lib.es5.d.ts
@@ -70,7 +69,7 @@ Info seq  [hh:mm:ss:mss] 	Files (4)
 	  Library referenced via 'decorators' from file '../../../../home/src/tslibs/TS/Lib/lib.es5.d.ts'
 	../../../../home/src/tslibs/TS/Lib/lib.decorators.legacy.d.ts
 	  Library referenced via 'decorators.legacy' from file '../../../../home/src/tslibs/TS/Lib/lib.es5.d.ts'
-	b.js
+	formatTrimRemainingRange.ts
 	  Root file specified for compilation
 
 Info seq  [hh:mm:ss:mss] -----------------------------------------------
@@ -79,7 +78,7 @@ Info seq  [hh:mm:ss:mss] 	Files (4)
 
 Info seq  [hh:mm:ss:mss] -----------------------------------------------
 Info seq  [hh:mm:ss:mss] Open files: 
-Info seq  [hh:mm:ss:mss] 	FileName: /tests/cases/fourslash/server/b.js ProjectRootPath: undefined
+Info seq  [hh:mm:ss:mss] 	FileName: /tests/cases/fourslash/server/formatTrimRemainingRange.ts ProjectRootPath: undefined
 Info seq  [hh:mm:ss:mss] 		Projects: /dev/null/inferredProject1*
 Info seq  [hh:mm:ss:mss] response:
     {
@@ -130,7 +129,7 @@ ScriptInfos::
     version: Text-1
     containingProjects: 1
         /dev/null/inferredProject1*
-/tests/cases/fourslash/server/b.js (Open) *new*
+/tests/cases/fourslash/server/formatTrimRemainingRange.ts (Open) *new*
     version: SVC-1-0
     containingProjects: 1
         /dev/null/inferredProject1* *default*
@@ -140,93 +139,54 @@ Info seq  [hh:mm:ss:mss] request:
       "seq": 2,
       "type": "request",
       "arguments": {
-        "file": "/tests/cases/fourslash/server/b.js",
-        "includeLinePosition": true
+        "file": "/tests/cases/fourslash/server/formatTrimRemainingRange.ts",
+        "line": 1,
+        "offset": 1,
+        "endLine": 4,
+        "endOffset": 3
       },
-      "command": "syntacticDiagnosticsSync"
+      "command": "format"
     }
 Info seq  [hh:mm:ss:mss] response:
     {
       "seq": 0,
       "type": "response",
-      "command": "syntacticDiagnosticsSync",
+      "command": "format",
       "request_seq": 2,
       "success": true,
       "body": [
         {
-          "message": "Type annotations can only be used in TypeScript files.",
-          "start": 20,
-          "length": 7,
-          "category": "error",
-          "code": 8010,
-          "startLocation": {
-            "line": 2,
-            "offset": 8
+          "start": {
+            "line": 1,
+            "offset": 1
           },
-          "endLocation": {
-            "line": 2,
-            "offset": 15
-          }
-        },
-        {
-          "message": "Type annotations can only be used in TypeScript files.",
-          "start": 52,
-          "length": 6,
-          "category": "error",
-          "code": 8010,
-          "startLocation": {
-            "line": 3,
-            "offset": 17
-          },
-          "endLocation": {
-            "line": 3,
-            "offset": 23
-          }
-        },
-        {
-          "message": "'var' is not allowed as a variable declaration name.",
-          "start": 67,
-          "length": 3,
-          "category": "error",
-          "code": 1389,
-          "startLocation": {
-            "line": 4,
+          "end": {
+            "line": 1,
             "offset": 5
           },
-          "endLocation": {
-            "line": 4,
-            "offset": 8
-          }
+          "newText": ""
         },
         {
-          "message": "Variable declaration expected.",
-          "start": 71,
-          "length": 1,
-          "category": "error",
-          "code": 1134,
-          "startLocation": {
-            "line": 4,
-            "offset": 9
+          "start": {
+            "line": 2,
+            "offset": 1
           },
-          "endLocation": {
-            "line": 4,
-            "offset": 10
-          }
+          "end": {
+            "line": 2,
+            "offset": 5
+          },
+          "newText": ""
         },
         {
-          "message": "Variable declaration expected.",
-          "start": 73,
-          "length": 3,
-          "category": "error",
-          "code": 1134,
-          "startLocation": {
-            "line": 4,
-            "offset": 11
+          "start": {
+            "line": 3,
+            "offset": 1
           },
-          "endLocation": {
-            "line": 4,
-            "offset": 14
-          }
+          "end": {
+            "line": 3,
+            "offset": 4
+          },
+          "newText": ""
         }
       ]
     }
@@ -235,17 +195,127 @@ Info seq  [hh:mm:ss:mss] request:
       "seq": 3,
       "type": "request",
       "arguments": {
-        "file": "/tests/cases/fourslash/server/b.js",
-        "includeLinePosition": true
+        "file": "/tests/cases/fourslash/server/formatTrimRemainingRange.ts",
+        "line": 1,
+        "offset": 1,
+        "endLine": 1,
+        "endOffset": 5,
+        "insertString": ""
       },
-      "command": "semanticDiagnosticsSync"
+      "command": "change"
     }
 Info seq  [hh:mm:ss:mss] response:
     {
       "seq": 0,
       "type": "response",
-      "command": "semanticDiagnosticsSync",
+      "command": "change",
       "request_seq": 3,
-      "success": true,
-      "body": []
+      "success": true
     }
+After Request
+Projects::
+/dev/null/inferredProject1* (Inferred) *changed*
+    projectStateVersion: 2 *changed*
+    projectProgramVersion: 1
+    dirty: true *changed*
+    autoImportProviderHost: false
+
+ScriptInfos::
+/home/src/tslibs/TS/Lib/lib.decorators.d.ts
+    version: Text-1
+    containingProjects: 1
+        /dev/null/inferredProject1*
+/home/src/tslibs/TS/Lib/lib.decorators.legacy.d.ts
+    version: Text-1
+    containingProjects: 1
+        /dev/null/inferredProject1*
+/home/src/tslibs/TS/Lib/lib.es5.d.ts
+    version: Text-1
+    containingProjects: 1
+        /dev/null/inferredProject1*
+/tests/cases/fourslash/server/formatTrimRemainingRange.ts (Open) *changed*
+    version: SVC-1-1 *changed*
+    containingProjects: 1
+        /dev/null/inferredProject1* *default*
+
+Info seq  [hh:mm:ss:mss] request:
+    {
+      "seq": 4,
+      "type": "request",
+      "arguments": {
+        "file": "/tests/cases/fourslash/server/formatTrimRemainingRange.ts",
+        "line": 2,
+        "offset": 1,
+        "endLine": 2,
+        "endOffset": 5,
+        "insertString": ""
+      },
+      "command": "change"
+    }
+Info seq  [hh:mm:ss:mss] response:
+    {
+      "seq": 0,
+      "type": "response",
+      "command": "change",
+      "request_seq": 4,
+      "success": true
+    }
+After Request
+ScriptInfos::
+/home/src/tslibs/TS/Lib/lib.decorators.d.ts
+    version: Text-1
+    containingProjects: 1
+        /dev/null/inferredProject1*
+/home/src/tslibs/TS/Lib/lib.decorators.legacy.d.ts
+    version: Text-1
+    containingProjects: 1
+        /dev/null/inferredProject1*
+/home/src/tslibs/TS/Lib/lib.es5.d.ts
+    version: Text-1
+    containingProjects: 1
+        /dev/null/inferredProject1*
+/tests/cases/fourslash/server/formatTrimRemainingRange.ts (Open) *changed*
+    version: SVC-1-2 *changed*
+    containingProjects: 1
+        /dev/null/inferredProject1* *default*
+
+Info seq  [hh:mm:ss:mss] request:
+    {
+      "seq": 5,
+      "type": "request",
+      "arguments": {
+        "file": "/tests/cases/fourslash/server/formatTrimRemainingRange.ts",
+        "line": 3,
+        "offset": 1,
+        "endLine": 3,
+        "endOffset": 4,
+        "insertString": ""
+      },
+      "command": "change"
+    }
+Info seq  [hh:mm:ss:mss] response:
+    {
+      "seq": 0,
+      "type": "response",
+      "command": "change",
+      "request_seq": 5,
+      "success": true
+    }
+After Request
+ScriptInfos::
+/home/src/tslibs/TS/Lib/lib.decorators.d.ts
+    version: Text-1
+    containingProjects: 1
+        /dev/null/inferredProject1*
+/home/src/tslibs/TS/Lib/lib.decorators.legacy.d.ts
+    version: Text-1
+    containingProjects: 1
+        /dev/null/inferredProject1*
+/home/src/tslibs/TS/Lib/lib.es5.d.ts
+    version: Text-1
+    containingProjects: 1
+        /dev/null/inferredProject1*
+/tests/cases/fourslash/server/formatTrimRemainingRange.ts (Open) *changed*
+    version: SVC-1-3 *changed*
+    containingProjects: 1
+        /dev/null/inferredProject1* *default*
