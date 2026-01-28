@@ -240,7 +240,6 @@ export namespace Compiler {
     interface HarnessOptions {
         useCaseSensitiveFileNames?: boolean;
         baselineFile?: string;
-        libFiles?: string;
         noTypesAndSymbols?: boolean;
         captureSuggestions?: boolean;
     }
@@ -251,7 +250,6 @@ export namespace Compiler {
         { name: "useCaseSensitiveFileNames", type: "boolean", defaultValueDescription: false },
         { name: "baselineFile", type: "string" },
         { name: "fileName", type: "string" },
-        { name: "libFiles", type: "string" },
         { name: "noErrorTruncation", type: "boolean", defaultValueDescription: false },
         { name: "suppressOutputPathCheck", type: "boolean", defaultValueDescription: false },
         { name: "noImplicitReferences", type: "boolean", defaultValueDescription: false },
@@ -367,13 +365,6 @@ export namespace Compiler {
         const programFileNames = inputFiles
             .map(file => options.configFile ? ts.getNormalizedAbsolutePath(file.unitName, currentDirectory) : file.unitName)
             .filter(fileName => !ts.fileExtensionIs(fileName, ts.Extension.Json));
-
-        // Files from tests\lib that are requested by "@libFiles"
-        if (options.libFiles) {
-            for (const fileName of options.libFiles.split(",")) {
-                programFileNames.push(vpath.combine(vfs.testLibFolder, fileName));
-            }
-        }
 
         const docs = inputFiles.concat(otherFiles).map(documents.TextDocument.fromTestFile);
         const fs = vfs.createFromFileSystem(IO, !useCaseSensitiveFileNames, { documents: docs, cwd: currentDirectory });
@@ -1008,7 +999,7 @@ export namespace Compiler {
 
     function fileOutput(file: documents.TextDocument, harnessSettings: TestCaseParser.CompilerSettings): string {
         const fileName = harnessSettings.fullEmitPaths ? Utils.removeTestPathPrefixes(file.file) : ts.getBaseFileName(file.file);
-        return "//// [" + fileName + "]\r\n" + Utils.removeTestPathPrefixes(file.text);
+        return "//// [" + fileName + "]\r\n" + file.text;
     }
 
     export function collateOutputs(outputFiles: readonly documents.TextDocument[]): string {
