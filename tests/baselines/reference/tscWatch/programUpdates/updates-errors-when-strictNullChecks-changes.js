@@ -146,7 +146,8 @@ Input::
 {
   "compilerOptions": {
     "strict": true,
-    "alwaysStrict": false
+    "alwaysStrict": false,
+    "ignoreDeprecations": "6.0"
   }
 }
 
@@ -184,6 +185,7 @@ Program root files: [
 Program options: {
   "strict": true,
   "alwaysStrict": false,
+  "ignoreDeprecations": "6.0",
   "watch": true,
   "configFilePath": "/user/username/projects/myproject/tsconfig.json"
 }
