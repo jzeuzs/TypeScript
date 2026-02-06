@@ -1580,6 +1580,10 @@ export const getScriptTargetFeatures: () => ScriptTargetFeatures = /* @__PURE__ 
                 "keys",
                 "values",
             ],
+            esnext: [
+                "getOrInsert",
+                "getOrInsertComputed",
+            ],
         })),
         MapConstructor: new Map(Object.entries({
             es2024: [
@@ -1636,6 +1640,10 @@ export const getScriptTargetFeatures: () => ScriptTargetFeatures = /* @__PURE__ 
                 "entries",
                 "keys",
                 "values",
+            ],
+            esnext: [
+                "getOrInsert",
+                "getOrInsertComputed",
             ],
         })),
         WeakSet: new Map(Object.entries({
