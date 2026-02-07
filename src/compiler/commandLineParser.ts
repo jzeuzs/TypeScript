@@ -251,11 +251,13 @@ const libEntries: [string, string][] = [
     // ESNext By-feature options
     ["esnext.array", "lib.esnext.array.d.ts"],
     ["esnext.collection", "lib.esnext.collection.d.ts"],
+    ["esnext.date", "lib.esnext.date.d.ts"],
     ["esnext.decorators", "lib.esnext.decorators.d.ts"],
     ["esnext.disposable", "lib.esnext.disposable.d.ts"],
     ["esnext.error", "lib.esnext.error.d.ts"],
     ["esnext.intl", "lib.esnext.intl.d.ts"],
     ["esnext.sharedmemory", "lib.esnext.sharedmemory.d.ts"],
+    ["esnext.temporal", "lib.esnext.temporal.d.ts"],
     ["esnext.typedarrays", "lib.esnext.typedarrays.d.ts"],
     // Decorators
     ["decorators", "lib.decorators.d.ts"],

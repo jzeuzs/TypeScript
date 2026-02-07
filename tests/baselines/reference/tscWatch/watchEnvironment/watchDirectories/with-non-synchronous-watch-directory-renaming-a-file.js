@@ -45,11 +45,11 @@ Output::
 
 //// [/home/src/tslibs/TS/Lib/lib.es2025.full.d.ts] *Lib* Inode:: 16
 
-//// [/user/username/projects/myproject/dist/src/file2.js] Inode:: 122
+//// [/user/username/projects/myproject/dist/src/file2.js] Inode:: 124
 export const x = 10;
 
 
-//// [/user/username/projects/myproject/dist/src/file1.js] Inode:: 123
+//// [/user/username/projects/myproject/dist/src/file1.js] Inode:: 125
 export {};
 
 
@@ -60,9 +60,9 @@ FsWatches::
 /user/username/projects/myproject: *new*
   {"inode":4}
 /user/username/projects/myproject/dist: *new*
-  {"inode":120}
+  {"inode":122}
 /user/username/projects/myproject/dist/src: *new*
-  {"inode":121}
+  {"inode":123}
 /user/username/projects/myproject/src: *new*
   {"inode":5}
 /user/username/projects/myproject/src/file1.ts: *new*
@@ -106,7 +106,7 @@ exitCode:: ExitStatus.undefined
 Change:: rename the file
 
 Input::
-//// [/user/username/projects/myproject/src/renamed.ts] Inode:: 124
+//// [/user/username/projects/myproject/src/renamed.ts] Inode:: 126
 export const x = 10;
 
 //// [/user/username/projects/myproject/src/file2.ts] deleted
@@ -125,9 +125,9 @@ FsWatches::
 /user/username/projects/myproject:
   {"inode":4}
 /user/username/projects/myproject/dist:
-  {"inode":120}
+  {"inode":122}
 /user/username/projects/myproject/dist/src:
-  {"inode":121}
+  {"inode":123}
 /user/username/projects/myproject/src:
   {"inode":5}
 /user/username/projects/myproject/src/file1.ts:
@@ -167,7 +167,7 @@ Output::
 
 
 
-//// [/user/username/projects/myproject/dist/src/file1.js] file written with same contents Inode:: 123
+//// [/user/username/projects/myproject/dist/src/file1.js] file written with same contents Inode:: 125
 
 PolledWatches::
 /user/username/projects/myproject/src/file2.ts:
@@ -183,9 +183,9 @@ FsWatches::
 /user/username/projects/myproject:
   {"inode":4}
 /user/username/projects/myproject/dist:
-  {"inode":120}
+  {"inode":122}
 /user/username/projects/myproject/dist/src:
-  {"inode":121}
+  {"inode":123}
 /user/username/projects/myproject/src:
   {"inode":5}
 /user/username/projects/myproject/src/file1.ts:
@@ -248,7 +248,7 @@ Output::
 
 
 
-//// [/user/username/projects/myproject/dist/src/renamed.js] Inode:: 125
+//// [/user/username/projects/myproject/dist/src/renamed.js] Inode:: 127
 export const x = 10;
 
 
@@ -263,15 +263,15 @@ FsWatches::
 /user/username/projects/myproject:
   {"inode":4}
 /user/username/projects/myproject/dist:
-  {"inode":120}
+  {"inode":122}
 /user/username/projects/myproject/dist/src:
-  {"inode":121}
+  {"inode":123}
 /user/username/projects/myproject/src:
   {"inode":5}
 /user/username/projects/myproject/src/file1.ts:
   {"inode":6}
 /user/username/projects/myproject/src/renamed.ts: *new*
-  {"inode":124}
+  {"inode":126}
 /user/username/projects/myproject/tsconfig.json:
   {"inode":8}
 

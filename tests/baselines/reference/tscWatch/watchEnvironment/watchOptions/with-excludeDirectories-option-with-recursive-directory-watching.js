@@ -53,7 +53,7 @@ Output::
 
 //// [/home/src/tslibs/TS/Lib/lib.es2025.full.d.ts] *Lib* Inode:: 22
 
-//// [/user/username/projects/myproject/src/main.js] Inode:: 126
+//// [/user/username/projects/myproject/src/main.js] Inode:: 128
 import { foo } from "bar";
 foo();
 
@@ -137,7 +137,7 @@ exitCode:: ExitStatus.undefined
 Change:: add new folder to temp
 
 Input::
-//// [/user/username/projects/myproject/node_modules/bar/temp/fooBar/index.d.ts] Inode:: 128
+//// [/user/username/projects/myproject/node_modules/bar/temp/fooBar/index.d.ts] Inode:: 130
 export function temp(): string;
 
 
